@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Question2 {
+    public static void main (String[] args) {
+        
+        Question2.triangle(5);
+        Question2.reverseTriangle(5);
+    }
+    public static void printStars(int n) {
+        //calculates and returns the GCF between two number
+         for (int i = 0; i < n; i++) {
+          System.out.print("*");
+       }
+        System.out.println("");
+    }
+     public static void triangle(int n){
+        if (n==0){
+           return; 
+        }
+        if (n!=0){
+           printStars(n);
+           triangle(n-1);
+        }
+    }
+    public static int i=0;
+    public static void reverseTriangle(int n){
+        
+        if (i==n){
+           return; 
+        }
+        if (i<n){
+           i++;
+           printStars(i);
+           reverseTriangle(n);
+        }
+    }
+}
+
