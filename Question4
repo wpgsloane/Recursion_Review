@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Question4 {
+    public static void main (String[] args) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Pick a word! Any word!");
+       String s = sc.nextLine();
+       if (isPalindrome(s)==true){
+           System.out.println(s+ " is a palindrome! Yay!");
+        } else{
+           System.out.println(s + " is not a palindrome. Please try again.");
+       }
+    }
+    private static int length;
+    private static String test="";
+    public static boolean isPalindrome (String word) {
+        length=word.length();
+        if (length!=0){
+            test=test+word.charAt(length-1);
+            return isPalindrome(word.substring(0,length-1));
+        }
+        if (test.equals(word)){
+            return true;
+        }
+        else{
+            return false;
+        }
+     }
+    }
+    
