@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Question1 {
+    public static void main (String[] args) {
+        int a=0;
+        int b=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pick a number!");
+        a = sc.nextInt();
+        System.out.println("Great! Pick a second number!");
+        b = sc.nextInt();
+        int gcd=gcd(a,b);
+       System.out.println("The GCD of " +a+ " and "+b+" is: " +gcd);
+    }
+    public static int gcd(int a, int b) {
+        //calculates and returns the GCF between two number
+        if (a == b){
+            return a;
+        }
+        
+        if (a < b){
+            return gcd(a,b-a);
+        }if(a>b){
+             return gcd(a-b,b);
+        }
+        return 0;
+    }
+    
+}
+
