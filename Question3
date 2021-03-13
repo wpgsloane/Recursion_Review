@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+class Question3 {
+    public static void main (String[] args) {
+        
+       
+       System.out.println(Question3.reverse("dog"));
+    }
+    private static int length;
+    private static String result="";
+    public static String reverse (String word) {
+        length=word.length();
+        if (length==0){
+            return result;
+        }
+        if (length!=0){
+            result=result+word.charAt(length-1); 
+            return reverse(word.substring(0,length-1));
+        }
+        return "";
+    }
+    }
+    
